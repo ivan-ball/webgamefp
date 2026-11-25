@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bfirgqwo4gird"]
 
-[ext_resource type="Script" uid="uid://d05l8r2kiheip" path="res://client/client_main.gd" id="1_q508y"]
+[ext_resource type="Script" uid="uid://d05l8r2kiheip" path="res://client/client_main.gd" id="1_ogjql"]
+[ext_resource type="PackedScene" uid="uid://ci8m8cs38vbj6" path="res://game/world.tscn" id="2_kqxjk"]
 
-[node name="ClientMain" type="Control" unique_id=2089363499]
+[node name="Main" type="Control" unique_id=2089363499]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_q508y")
+script = ExtResource("1_ogjql")
+
+[node name="World" parent="." unique_id=818112580 instance=ExtResource("2_kqxjk")]
 
 [node name="VBox" type="VBoxContainer" parent="." unique_id=1657823895]
 layout_mode = 0

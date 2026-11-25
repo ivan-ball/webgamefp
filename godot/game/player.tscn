@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://1fq6ax6sy0nm"]
+
+[ext_resource type="Script" uid="uid://csbqxhr8pf3k2" path="res://game/player.gd" id="1_dadds"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t2b1"]
+size = Vector2(32, 32)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_fgci7"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+
+[node name="Player" type="CharacterBody2D" unique_id=1407301282]
+script = ExtResource("1_dadds")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=614795776]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+color = Color(0, 1, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1590993317]
+shape = SubResource("RectangleShape2D_0t2b1")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=416293310]
+replication_config = SubResource("SceneReplicationConfig_fgci7")

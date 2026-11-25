@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ci8m8cs38vbj6"]
+
+[node name="World" type="Node2D" unique_id=818112580]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1407405657]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="Players" type="Node2D" parent="." unique_id=532965456]
+
+[node name="Spawner" type="MultiplayerSpawner" parent="." unique_id=989230125]
+_spawnable_scenes = PackedStringArray("uid://1fq6ax6sy0nm")
+spawn_path = NodePath("../Players")
