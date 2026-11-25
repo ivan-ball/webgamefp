@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bfirgqwo4gird"]
+
+[ext_resource type="Script" uid="uid://d05l8r2kiheip" path="res://client/client_main.gd" id="1_q508y"]
+
+[node name="ClientMain" type="Control" unique_id=2089363499]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q508y")
+
+[node name="VBox" type="VBoxContainer" parent="." unique_id=1657823895]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Status" type="Label" parent="VBox" unique_id=1952532357]
+layout_mode = 2
+
+[node name="Host" type="LineEdit" parent="VBox" unique_id=244762361]
+layout_mode = 2
+
+[node name="Connect" type="Button" parent="VBox" unique_id=994259540]
+layout_mode = 2
+text = "Connect"
