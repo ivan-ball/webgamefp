@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1fq6ax6sy0nm"]
 
 [ext_resource type="Script" uid="uid://csbqxhr8pf3k2" path="res://game/player.gd" id="1_dadds"]
+[ext_resource type="Texture2D" uid="uid://dknl2emetuja6" path="res://sword.png" id="2_w5y0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0t2b1"]
 size = Vector2(32, 32)
@@ -9,6 +10,9 @@ size = Vector2(32, 32)
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
+properties/1/path = NodePath(".:facing")
+properties/1/spawn = true
+properties/1/replication_mode = 2
 
 [node name="Player" type="CharacterBody2D" unique_id=1407301282]
 script = ExtResource("1_dadds")
@@ -25,3 +29,14 @@ shape = SubResource("RectangleShape2D_0t2b1")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=416293310]
 replication_config = SubResource("SceneReplicationConfig_fgci7")
+
+[node name="SwordPivot" type="Node2D" parent="." unique_id=1523199144]
+
+[node name="Swing" type="Node2D" parent="SwordPivot" unique_id=4445059]
+
+[node name="SwordSprite" type="Sprite2D" parent="SwordPivot/Swing" unique_id=570421201]
+texture_filter = 1
+position = Vector2(32, -4.7683716e-07)
+rotation = 0.7853982
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_w5y0b")
